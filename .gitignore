@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#custom generation
+/custom/generated/*
+
 # next.js
 /.next/
 /out/
