@@ -16,6 +16,7 @@ readline.question('Nome do componente: ', (componentName) => {
     styles: `${BASE_TEMPLATE_PATH}/BaseTemplate.styles.ts`,
     mocks: `${BASE_TEMPLATE_PATH}/coverage/BaseTemplate.mocks.ts`,
     stories: `${BASE_TEMPLATE_PATH}/coverage/BaseTemplate.stories.tsx`,
+    spec: `${BASE_TEMPLATE_PATH}/coverage/BaseTemplate.spec.tsx`,
   };
 
   const OUTPUT_PATHS = {
@@ -23,6 +24,7 @@ readline.question('Nome do componente: ', (componentName) => {
     styles: `${BASE_OUTPUT_PATH}/${componentName}.styles.ts`,
     mocks: `${BASE_OUTPUT_PATH}/coverage/${componentName}.mocks.ts`,
     stories: `${BASE_OUTPUT_PATH}/coverage/${componentName}.stories.tsx`,
+    spec: `${BASE_OUTPUT_PATH}/coverage/${componentName}.spec.tsx`,
   };
 
   fs.mkdirSync(BASE_OUTPUT_PATH);
@@ -36,5 +38,5 @@ readline.question('Nome do componente: ', (componentName) => {
     fs.writeFileSync(OUTPUT_PATHS[fileTypeKey], output, 'utf8');
   });
 
-  console.log(`\nComponent "${componentName}" generated successfully!`);
+  console.log(`\n✔ Component "${componentName}" generated successfully!`);
 });

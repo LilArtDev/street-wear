@@ -1,9 +1,13 @@
 import { BaseTemplateProps } from '../BaseTemplate.component';
 
-const base: BaseTemplateProps = {
-  sampleTextProp: 'Hello world!',
+const LARGE: BaseTemplateProps = {
+  size: 'large',
+};
+const DEFAULT: BaseTemplateProps = {
+  size: 'default',
 };
 
 export const mockBaseTemplateProps = {
-  base,
+  LARGE,
+  DEFAULT,
 };

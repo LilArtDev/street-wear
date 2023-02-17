@@ -1,11 +1,18 @@
 import * as S from './BaseTemplate.styles';
 
-export interface BaseTemplateProps {
-  sampleTextProp: string;
-}
+export const TEST_ID = '';
 
-const BaseTemplate: React.FC<BaseTemplateProps> = ({ sampleTextProp }) => {
-  return <S.Container>{sampleTextProp}</S.Container>;
+export type BaseTemplateProps = React.HTMLAttributes<HTMLDivElement> & {
+  size: 'default' | 'large';
 };
 
-export default BaseTemplate;
+export const BaseTemplate: React.FC<BaseTemplateProps> = ({
+  children,
+  ...props
+}) => {
+  return (
+    <S.Container {...props} data-testid={TEST_ID}>
+      {children}
+    </S.Container>
+  );
+};
